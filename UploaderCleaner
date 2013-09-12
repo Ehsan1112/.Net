@@ -1,0 +1,13 @@
+  private string FileNameCleaner(string DirtyString)
+    {
+        string SafeName = DirtyString.Replace('/', '_');
+        SafeName = SafeName.Replace('\\', '_');
+        SafeName = SafeName.Replace('*', '_');
+        SafeName = SafeName.Replace(':', '_');
+        SafeName = SafeName.Replace('?', '_');
+        SafeName = SafeName.Replace('<', '_');
+        SafeName = SafeName.Replace('>', '_');
+        SafeName = SafeName.Replace('|', '_');
+        SafeName = SafeName.Replace(' ', '_');
+        return SafeName;
+    }
